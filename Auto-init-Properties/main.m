@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Student.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        /** 普通初始化 */
+        Student *stu1 = [[Student alloc] init];
+        /** 属性自动赋初值的初始化 */
+        Student *stu2 = [[Student alloc] initPropertiesWithString];
+        
+        [stu1 showProperties];
+        [stu2 showProperties];
     }
     return 0;
 }
